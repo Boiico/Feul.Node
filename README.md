@@ -1,12 +1,15 @@
-----------------------------------------------------------
-  # System Requirements ⚙️ to Run a Fuel Node
+# ➡️ This is a Step by Step guide to run a Fuel node ⬅️
+ 
+ 🔰 Follow my X for future Updates https://x.com/thepaulini
+ 
 ----------------------------------------------------------  
-- OS: Ubuntu 22 or 24 💻
+#  ⚙️ System Requirements ⚙️ 💻
+- OS: Ubuntu 22 or 24  
 - Minimum: 2CPU, 4RAM, 30GB SSD
 - Recommended: 8CPU, 12RAM, 100GB SSD
 ----------------------------------------------------------
 
-💢 Step 1 📍
+✅  Step 1 📍
 
 ```
 sudo apt-get update && apt-get upgrade -y
@@ -14,15 +17,15 @@ sudo apt install wget curl
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs/ | sh
 apt install rustup
 ```
-💢 Step 2 📍
+✅  Step 2 📍
 
 ```
 curl https://install.fuel.network | sh
 ```
 
-  #Press Y then Enter
+#Press Y then Enter
 
-💢 Step 3 📍
+✅  Step 3 📍
 
 ```
 source /root/.bashrc
@@ -30,31 +33,31 @@ fuelup toolchain install latest
 fuelup --version
 ```
 
-💢 Step 4 📍
+✅  Step 4 📍
 
 ```
 fuelup self update
 ```
 
-💢 Step 5 📍
+✅  Step 5 📍
 
 ```
 fuelup toolchain install nightly
 ```
 
-💢 Step 6 📍
+✅  Step 6 📍
 
 ```
 fuelup default nightly
 ```
 
-💢 Step 7 📍
+✅  Step 7 📍
 
 ```
 fuelup show
 ```
 
-💢 Step 8 📍
+✅  Step 8 📍
 
 ```
 forc wallet new
@@ -62,7 +65,7 @@ forc wallet new
 
 #You need to choose a password for yourself; the password will not be displayed as you type. Then press Enter, re-enter the password, and press Enter again. After that, you will be given recovery words that you need to save.
 
-💢 Step 9 📍
+✅  Step 9 📍
 
 ```
 forc wallet account new
@@ -70,7 +73,7 @@ forc wallet account new
 
 #You will be given a wallet address. You need to use this address (https://faucet-testnet.fuel.network) to request faucet funds for your wallet.
 
-💢 Step 10 📍
+✅  Step 10 📍
 
 ```
 fuelup default
@@ -78,19 +81,19 @@ fuelup default
 
 #Go to the Alchemy website and create an account. Then, in the Apps section, click on Create new app. In the Chain section, select Ethereum, and in the Network section, select Sepolia. Enter a name and description, and finally, click on Create app. Now, save the three sections from the API Key section: API Key, HTTPS, and WebSocket.
 
-💢 Step 11 📍
+✅  Step 11 📍
 
 ```
 git clone https://github.com/fmsuicmc/metadata-fuel
 ```
 
-💢 Step 12 📍
+✅  Step 12 📍
 
 ```
 fuelup toolchain install testnet
 ```
 
-💢 Step 13 📍
+✅  Step 13 📍
 
 ```
 fuelup default testnet
@@ -99,14 +102,14 @@ fuel-core-keygen new --key-type peering
 
 #In this section, copy the p2p key and store it in a safe place.
 
-💢 Step 14 📍
+✅  Step 14 📍
 
 ```
 apt install screen
 screen -S fuel
 ```
 
-💢 Step 15 📍
+✅  Step 15 📍
 
 
 #Replace the ANY_SERVICE_NAME section with your desired name, the P2P_SECRET section with the corresponding p2p key, and the ETH_RPC_ENDPOINT section with the Rpc from the HTTPS section on the Alchemy website.
@@ -133,8 +136,6 @@ fuel-core run \
 
 #If the numbers are not zero in Alchemy, it means you have done it correctly.
 
-
-
 🥳 Congrats You've run a node on Fuel.Network! 🥳 
 
 ----------------------------------------------------------
@@ -143,16 +144,16 @@ fuel-core run \
 ----------------------------------------------------------
 ----------------------------------------------------------
 
-# 🌟Now we need to create a project and deploy a contract
+# 🌟Now we need to create a project and deploy a contract 🌟
 
-💢 Step 1 (creating a project) 📍
+✅  Step 1 (creating a project) 📍
 
 ```
 mkdir fuel-project
 cd fuel-project
 forc new counter-contract
 ```
-💢 Step 2 (Editing contract) 📍
+✅  Step 2 (Editing contract) 📍
 
 ```
 nano counter-contract/src/main.sw
@@ -208,13 +209,13 @@ Network: https://testnet.fuel.network
 Contract ID: 0x8342d413de2a678245d9ee39f020795800c7e6a4ac5ff7daae275f533dc05e08
 Deployed in block: 0x4ea52b6652836c499e44b7e42f7c22d1ed1f03cf90a1d94cd0113b9023dfa636
 
-💢 Step 3 (Checking Nodejs Version) 📍
+✅  Step 3 (Checking Nodejs Version) 📍
 
 
 ```
 node --version
 ```
-💢 Step 4 (Deleting old files) 📍
+✅  Step 4 (Deleting old files) 📍
 
 ```
 sudo apt-get remove nodejs
@@ -223,7 +224,7 @@ sudo apt-get autoremove
 sudo rm /etc/apt/keyrings/nodesource.gpg
 sudo rm /etc/apt/sources.list.d/nodesource.list
 ```
-💢 Step 5 (Installing Nodejs 18) 📍
+✅  Step 5 (Installing Nodejs 18) 📍
 
 ```
 NODE_MAJOR=18
@@ -242,13 +243,13 @@ sudo apt-get update
 sudo apt-get install -y nodejs
 node --version
 ```
-💢 Step 6 (Creating Dapp Frontend) 📍
+✅  Step 6 (Creating Dapp Frontend) 📍
 
 ```
 cd $HOME && cd fuel-project
 npx create-react-app frontend --template typescript
 ```
-💢 Step 7 (Installing fuels sdk) 📍
+✅  Step 7 (Installing fuels sdk) 📍
 
 ```
 ls
@@ -258,7 +259,7 @@ npm install fuels @fuels/react @fuels/connectors @tanstack/react-query
 ```
 npm audit fix --force
 ```
-💢 Step 8 (Generating Contract type) 📍
+✅  Step 8 (Generating Contract type) 📍
 
 ```
 npx fuels init --contracts ../counter-contract/ --output ./src/sway-api
@@ -276,18 +277,18 @@ Generating types..
 npx fuels init --contracts ../counter-contract/ --output ./src/sway-api
 ```
 
-💢 Step 9 📍
+✅  Step 9 📍
 ```
 npx fuels build
 ```
 
-💢 Step 10 (Editing index) 📍
+✅  Step 10 (Editing index) 📍
 
 ```
 nano src/index.tsx
 ```
 
-💢 Step 11 (Delete everything and Paste this code) 📍
+✅  Step 11 (Delete everything and Paste this code) 📍
 
 ```
 import React from 'react';
@@ -326,12 +327,12 @@ root.render(
 reportWebVitals();
 ```
 
-💢 Step 12 (Editing Dapp)
+✅  Step 12 (Editing Dapp)
 
 ```
 nano src/App.tsx
 ```
-💢 Step 13 (Delete everything and Paste this code)
+✅  Step 13 (Delete everything and Paste this code)
 
 #Replace Contract ID with your own Contract ID
 
@@ -474,7 +475,7 @@ const styles = {
   },
 }
 ```
-💢 Step 14 (Starting Dapp) 📍
+✅  Step 14 (Starting Dapp) 📍
 
 
 ```
@@ -484,20 +485,18 @@ npm audit fix --force
 npm start
 ```
 
-💢 Step 15 📍
+✅  Step 15 📍
 
-#You Have to see this in your terminal
+ℹ️ #You Have to see this in your terminal : Compiled successfully!
 
-#Compiled successfully!
-
-#You can now view frontend in the browser.
+ℹ️ #You can now view frontend in the browser.
 
 Local:            http://localhost:3000
 On Your Network:  http://192.168.4.48:3000
   
-#If you dont see you Dapp open ports
+ℹ️ #If you dont see you Dapp open the following ports.
 
-💢 Step 16 (Opening ports) 📍
+✅  Step 16 (Opening ports) 📍 (optional)
 
 ```
 ufw allow 3000/tcp
@@ -506,11 +505,10 @@ ufw allow 3000/tcp
 ufw allow 4000/tcp
 ```
 
-💢 Step 17 📍
+✅  Step 17 📍
 
-#Add this rpc to your wallet networks
+#Add this rpc to your wallet networks (optional)
 
 ```
 http://your_ip:4000/graphql
 ```
-
