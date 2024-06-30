@@ -145,14 +145,14 @@ fuel-core run \
 
 # 🌟Now we need to create a project and deploy a contract
 
-💢 Step 1 (creating a project)
+💢 Step 1 (creating a project) 📍
 
 ```
 mkdir fuel-project
 cd fuel-project
 forc new counter-contract
 ```
-💢 Step 2 (Editing contract)
+💢 Step 2 (Editing contract) 📍
 
 ```
 nano counter-contract/src/main.sw
@@ -208,13 +208,13 @@ Network: https://testnet.fuel.network
 Contract ID: 0x8342d413de2a678245d9ee39f020795800c7e6a4ac5ff7daae275f533dc05e08
 Deployed in block: 0x4ea52b6652836c499e44b7e42f7c22d1ed1f03cf90a1d94cd0113b9023dfa636
 
-💢 Step 3 (Checking Nodejs Version)
+💢 Step 3 (Checking Nodejs Version) 📍
 
 
 ```
 node --version
 ```
-💢 Step 4 (Deleting old files)
+💢 Step 4 (Deleting old files) 📍
 
 ```
 sudo apt-get remove nodejs
@@ -223,7 +223,7 @@ sudo apt-get autoremove
 sudo rm /etc/apt/keyrings/nodesource.gpg
 sudo rm /etc/apt/sources.list.d/nodesource.list
 ```
-💢 Step 5 (Installing Nodejs 18)
+💢 Step 5 (Installing Nodejs 18) 📍
 
 ```
 NODE_MAJOR=18
@@ -242,13 +242,13 @@ sudo apt-get update
 sudo apt-get install -y nodejs
 node --version
 ```
-💢 Step 6 (Creating Dapp Frontend)
+💢 Step 6 (Creating Dapp Frontend) 📍
 
 ```
 cd $HOME && cd fuel-project
 npx create-react-app frontend --template typescript
 ```
-💢 Step 7 (Installing fuels sdk)
+💢 Step 7 (Installing fuels sdk) 📍
 
 ```
 ls
@@ -258,7 +258,7 @@ npm install fuels @fuels/react @fuels/connectors @tanstack/react-query
 ```
 npm audit fix --force
 ```
-💢 Step 8 (Generating Contract type)
+💢 Step 8 (Generating Contract type) 📍
 
 ```
 npx fuels init --contracts ../counter-contract/ --output ./src/sway-api
@@ -276,18 +276,18 @@ Generating types..
 npx fuels init --contracts ../counter-contract/ --output ./src/sway-api
 ```
 
-💢 Step 9
+💢 Step 9 📍
 ```
 npx fuels build
 ```
 
-💢 Step 10 (Editing index)
+💢 Step 10 (Editing index) 📍
 
 ```
 nano src/index.tsx
 ```
 
-💢 Step 11 (Delete everything and Paste this code)
+💢 Step 11 (Delete everything and Paste this code) 📍
 
 ```
 import React from 'react';
@@ -474,7 +474,7 @@ const styles = {
   },
 }
 ```
-💢 Step 14 (Starting Dapp)
+💢 Step 14 (Starting Dapp) 📍
 
 
 ```
@@ -484,7 +484,7 @@ npm audit fix --force
 npm start
 ```
 
-💢 Step 15
+💢 Step 15 📍
 
 #You Have to see this in your terminal
 
@@ -497,7 +497,7 @@ On Your Network:  http://192.168.4.48:3000
   
 #If you dont see you Dapp open ports
 
-💢 Step 16 (Opening ports)
+💢 Step 16 (Opening ports) 📍
 
 ```
 ufw allow 3000/tcp
@@ -506,7 +506,7 @@ ufw allow 3000/tcp
 ufw allow 4000/tcp
 ```
 
-💢 Step 17
+💢 Step 17 📍
 
 #Add this rpc to your wallet networks
 
