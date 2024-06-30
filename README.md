@@ -1,12 +1,12 @@
 ----------------------------------------------------------
   # System Requirements ⚙️ to Run a Fuel Node
 ----------------------------------------------------------  
-- OS: Ubuntu 22 or 24
+- OS: Ubuntu 22 or 24 💻
 - Minimum: 2CPU, 4RAM, 30GB SSD
 - Recommended: 8CPU, 12RAM, 100GB SSD
 ----------------------------------------------------------
 
-💢 Step 1
+💢 Step 1 📍
 
 ```
 sudo apt-get update && apt-get upgrade -y
@@ -14,7 +14,7 @@ sudo apt install wget curl
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs/ | sh
 apt install rustup
 ```
-💢 Step 2
+💢 Step 2 📍
 
 ```
 curl https://install.fuel.network | sh
@@ -22,7 +22,7 @@ curl https://install.fuel.network | sh
 
   #Press Y then Enter
 
-💢 Step 3
+💢 Step 3 📍
 
 ```
 source /root/.bashrc
@@ -30,31 +30,31 @@ fuelup toolchain install latest
 fuelup --version
 ```
 
-💢 Step 4
+💢 Step 4 📍
 
 ```
 fuelup self update
 ```
 
-💢 Step 5
+💢 Step 5 📍
 
 ```
 fuelup toolchain install nightly
 ```
 
-💢 Step 6
+💢 Step 6 📍
 
 ```
 fuelup default nightly
 ```
 
-💢 Step 7
+💢 Step 7 📍
 
 ```
 fuelup show
 ```
 
-💢 Step 8
+💢 Step 8 📍
 
 ```
 forc wallet new
@@ -62,7 +62,7 @@ forc wallet new
 
 #You need to choose a password for yourself; the password will not be displayed as you type. Then press Enter, re-enter the password, and press Enter again. After that, you will be given recovery words that you need to save.
 
-💢 Step 9
+💢 Step 9 📍
 
 ```
 forc wallet account new
@@ -70,7 +70,7 @@ forc wallet account new
 
 #You will be given a wallet address. You need to use this address (https://faucet-testnet.fuel.network) to request faucet funds for your wallet.
 
-💢 Step 10
+💢 Step 10 📍
 
 ```
 fuelup default
@@ -78,19 +78,19 @@ fuelup default
 
 #Go to the Alchemy website and create an account. Then, in the Apps section, click on Create new app. In the Chain section, select Ethereum, and in the Network section, select Sepolia. Enter a name and description, and finally, click on Create app. Now, save the three sections from the API Key section: API Key, HTTPS, and WebSocket.
 
-💢 Step 11
+💢 Step 11 📍
 
 ```
 git clone https://github.com/fmsuicmc/metadata-fuel
 ```
 
-💢 Step 12
+💢 Step 12 📍
 
 ```
 fuelup toolchain install testnet
 ```
 
-💢 Step 13
+💢 Step 13 📍
 
 ```
 fuelup default testnet
@@ -99,14 +99,14 @@ fuel-core-keygen new --key-type peering
 
 #In this section, copy the p2p key and store it in a safe place.
 
-💢 Step 14
+💢 Step 14 📍
 
 ```
 apt install screen
 screen -S fuel
 ```
 
-💢 Step 15
+💢 Step 15 📍
 
 
 #Replace the ANY_SERVICE_NAME section with your desired name, the P2P_SECRET section with the corresponding p2p key, and the ETH_RPC_ENDPOINT section with the Rpc from the HTTPS section on the Alchemy website.
