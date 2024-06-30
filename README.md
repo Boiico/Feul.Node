@@ -23,7 +23,7 @@ apt install rustup
 curl https://install.fuel.network | sh
 ```
 
-#Press Y then Enter
+ℹ️ #Press Y then Enter
 
 ✅  Step 3 📍
 
@@ -63,7 +63,7 @@ fuelup show
 forc wallet new
 ```
 
-#You need to choose a password for yourself; the password will not be displayed as you type. Then press Enter, re-enter the password, and press Enter again. After that, you will be given recovery words that you need to save.
+ℹ️ #You need to choose a password for yourself; the password will not be displayed as you type. Then press Enter, re-enter the password, and press Enter again. After that, you will be given recovery words that you need to save.
 
 ✅  Step 9 📍
 
@@ -71,7 +71,7 @@ forc wallet new
 forc wallet account new
 ```
 
-#You will be given a wallet address. You need to use this address (https://faucet-testnet.fuel.network) to request faucet funds for your wallet.
+ℹ️ #You will be given a wallet address. You need to use this address (https://faucet-testnet.fuel.network) to request faucet funds for your wallet.
 
 ✅  Step 10 📍
 
@@ -79,7 +79,7 @@ forc wallet account new
 fuelup default
 ```
 
-#Go to the Alchemy website and create an account. Then, in the Apps section, click on Create new app. In the Chain section, select Ethereum, and in the Network section, select Sepolia. Enter a name and description, and finally, click on Create app. Now, save the three sections from the API Key section: API Key, HTTPS, and WebSocket.
+ℹ️ #Go to the Alchemy website and create an account. Then, in the Apps section, click on Create new app. In the Chain section, select Ethereum, and in the Network section, select Sepolia. Enter a name and description, and finally, click on Create app. Now, save the three sections from the API Key section: API Key, HTTPS, and WebSocket.
 
 ✅  Step 11 📍
 
@@ -100,7 +100,7 @@ fuelup default testnet
 fuel-core-keygen new --key-type peering
 ```
 
-#In this section, copy the p2p key and store it in a safe place.
+ℹ️ #In this section, copy the p2p key and store it in a safe place.
 
 ✅  Step 14 📍
 
@@ -112,7 +112,7 @@ screen -S fuel
 ✅  Step 15 📍
 
 
-#Replace the ANY_SERVICE_NAME section with your desired name, the P2P_SECRET section with the corresponding p2p key, and the ETH_RPC_ENDPOINT section with the Rpc from the HTTPS section on the Alchemy website.
+ℹ️ #Replace the ANY_SERVICE_NAME section with your desired name, the P2P_SECRET section with the corresponding p2p key, and the ETH_RPC_ENDPOINT section with the Rpc from the HTTPS section on the Alchemy website.
 
 ```
 fuel-core run \
@@ -132,9 +132,9 @@ fuel-core run \
 --relayer-log-page-size 2000
 ```
 
-#Press Enter and use the Ctrl+A+D command to exit the screen.
+ℹ️ #Press Enter and use the Ctrl+A+D command to exit the screen.
 
-#If the numbers are not zero in Alchemy, it means you have done it correctly.
+ℹ️ #If the numbers are not zero in Alchemy, it means you have done it correctly.
 
 🥳 Congrats You've run a node on Fuel.Network! 🥳 
 
@@ -158,7 +158,7 @@ forc new counter-contract
 ```
 nano counter-contract/src/main.sw
 ```
-#Delete everything and Paste this code
+ℹ️ #Delete everything and Paste this code
 
 ```
 contract;
@@ -188,7 +188,7 @@ impl Counter for Contract {
     }
 }
 ```
-#Press crtl + X t , Press Y , Press Enter
+ℹ️ #Press crtl + X t , Press Y , Press Enter
 
 ```
 cd counter-contract
@@ -197,12 +197,12 @@ forc build
 ```
 
 
-#Deploy Contract , Enter password , Enter 1 , Enter y
+ℹ️ #Deploy Contract , Enter password , Enter 1 , Enter y
 ```
 forc deploy --testnet
 ```
 
-#You get a Contract ID in your Terminal like this, Save it!
+ℹ️ #You get a Contract ID in your Terminal like this, Save it!
 Contract counter-contract Deployed!
 
 Network: https://testnet.fuel.network
@@ -266,13 +266,11 @@ npx fuels init --contracts ../counter-contract/ --output ./src/sway-api
 npx fuels build
 ```
 
-#Yout have to get this message:
-
-Building Sway programs using source 'forc' binary
+ℹ️ #Yout have to get this message : Building Sway programs using source 'forc' binary
 Generating types..
 🎉  Build completed successfully!
 
-#If you get Config file not found again do this:
+ℹ️ #If you get Config file not found again do this:
 ```
 npx fuels init --contracts ../counter-contract/ --output ./src/sway-api
 ```
@@ -334,7 +332,7 @@ nano src/App.tsx
 ```
 ✅  Step 13 (Delete everything and Paste this code)
 
-#Replace Contract ID with your own Contract ID
+ℹ️ #Replace Contract ID with your own Contract ID
 
 ```
 import { useEffect, useState } from "react";
@@ -507,8 +505,10 @@ ufw allow 4000/tcp
 
 ✅  Step 17 📍
 
-#Add this rpc to your wallet networks (optional)
+ℹ️ #Add this rpc to your wallet networks (optional)
 
 ```
 http://your_ip:4000/graphql
 ```
+
+----------------------------------------------------------
