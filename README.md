@@ -5,8 +5,8 @@
 ----------------------------------------------------------  
 #  ⚙️ System Requirements ⚙️ 💻
 - OS: Ubuntu 22 or 24  
-- Minimum: 2CPU, 4RAM, 30GB SSD
-- Recommended: 8CPU, 12RAM, 100GB SSD
+- Minimum: 2CPU, 4GB RAM, 30GB SSD
+- Recommended: 8CPU, 12GB RAM, 100GB SSD
 ----------------------------------------------------------
 
 ✅  Step 1 📍
@@ -492,7 +492,7 @@ npm start
 Local:            http://localhost:3000
 On Your Network:  http://192.168.4.48:3000
   
-ℹ️ #If you dont see you Dapp open the following ports.
+ℹ️ #If you dont see your Dapp, open the following ports.
 
 ✅  Step 16 (Opening ports) 📍 (optional)
 
@@ -505,7 +505,7 @@ ufw allow 4000/tcp
 
 ✅  Step 17 📍
 
-ℹ️ #Add this rpc to your wallet networks (optional)
+ℹ️ #Add this RPC to your wallet networks (optional)
 
 ```
 http://your_ip:4000/graphql
